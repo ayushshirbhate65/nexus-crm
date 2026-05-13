@@ -82,7 +82,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
       {/* Sidebar */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 z-50 w-64 bg-card border-r transition-transform lg:translate-x-0 lg:static",
+        "fixed inset-y-0 left-0 z-50 w-64 bg-white border-r transition-transform lg:translate-x-0 lg:static shadow-2xl lg:shadow-none",
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="h-full flex flex-col">
@@ -114,7 +114,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Navbar */}
-        <header className="h-16 border-b bg-card flex items-center justify-between px-4 lg:px-8">
+        <header className="h-16 border-b bg-white flex items-center justify-between px-4 lg:px-8">
           <button 
             className="lg:hidden p-2 hover:bg-accent rounded-md"
             onClick={() => setIsSidebarOpen(true)}
